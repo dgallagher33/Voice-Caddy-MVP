@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "course": { "name": "Demo GC" },
+  "holes": [
+    {
+      "num": 1,
+      "shots": [
+        { "club": "D",  "type": "tee",      "lat": 0, "lng": 0, "ts": "2025-08-11T12:00:00Z" },
+        { "club": "7i", "type": "approach", "lat": 0, "lng": 0, "ts": "2025-08-11T12:04:00Z" }
+      ],
+      "putts": 2,
+      "scoreResult": "par"
+    }
+  ]
+}
