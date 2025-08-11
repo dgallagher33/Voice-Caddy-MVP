@@ -1,0 +1,31 @@
+name: User Story
+description: Feature request in user story format
+labels: ["type:story"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User Story
+      description: As a <user>, I want <capability> so that <benefit>.
+      placeholder: As a golfer, I want to tap a mic and speak a recap so I can log the hole quickly.
+    validations: { required: true }
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria (Given/When/Then)
+      placeholder: |- 
+        Given I am on Hole 1
+        When I tap the mic and speak "Driver, 7-iron, two-putt par"
+        Then I see the parsed clubs and score
+    validations: { required: true }
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options: [S, M, L]
+    validations: { required: true }
+  - type: input
+    id: epic
+    attributes:
+      label: Epic Link
+      placeholder: EPIC-01
