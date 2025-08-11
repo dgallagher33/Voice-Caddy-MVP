@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RoundV1",
+  "type": "object",
+  "properties": {
+    "version": { "const": "1.0" },
+    "course": { "type": "object", "properties": { "name": {"type":"string"} }, "required": ["name"] },
+    "holes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "num": { "type": "integer" },
+          "shots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "club": { "type": "string" },
+                "type": { "type": "string", "enum": ["tee","approach","chip","putt","other"] },
+                "lat": { "type": "number" },
+                "lng": { "type": "number" },
+                "ts":  { "type": "string", "format": "date-time" }
+              },
+              "required": ["club","type","ts"]
+            }
+          },
+          "putts": { "type": "integer" },
+          "scoreResult": { "type": "string", "enum": ["eagle","birdie","par","bogey","double","other"] }
+        },
+        "required": ["num"]
+      }
+    }
+  },
+  "required": ["version","course","holes"]
+}
